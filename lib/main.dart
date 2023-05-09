@@ -1,3 +1,4 @@
+import 'package:design_patterns/builder/application.dart';
 import 'package:design_patterns/factory/polygonFactory.dart';
 import 'package:design_patterns/singleton/singleton.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   var singleton = Singleton().getInstance();
+  var application = Application();
 
   Future<void> _incrementCounter() async {
     setState(() {
@@ -43,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
     print(PolygonFactory().getPolygon(_counter)?.createPolygon());
     print(await singleton);
     print(await Singleton().getInstance());
+    print(application.makeCar("Sport"));
   }
 
   @override
