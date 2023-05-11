@@ -3,6 +3,7 @@ import 'package:design_patterns/factory/polygonFactory.dart';
 import 'package:design_patterns/singleton/singleton.dart';
 import 'package:flutter/material.dart';
 
+import 'adapter/client.dart';
 import 'factory/polygon.dart';
 
 void main() {
@@ -46,6 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
     print(await singleton);
     print(await Singleton().getInstance());
     print(application.makeCar("Sport"));
+    Client().run();
   }
 
   @override
