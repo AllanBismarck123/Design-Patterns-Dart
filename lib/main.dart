@@ -1,10 +1,10 @@
 import 'package:design_patterns/builder/application.dart';
+import 'package:design_patterns/decorator/applicationConfigurator.dart';
 import 'package:design_patterns/factory/polygonFactory.dart';
 import 'package:design_patterns/singleton/singleton.dart';
 import 'package:flutter/material.dart';
 
 import 'adapter/client.dart';
-import 'factory/polygon.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,11 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
-    print(PolygonFactory().getPolygon(_counter)?.createPolygon());
-    print(await singleton);
-    print(await Singleton().getInstance());
-    print(application.makeCar("Sport"));
-    Client().run();
+    //print(PolygonFactory().getPolygon(_counter)?.createPolygon());
+    //print(await singleton);
+    //print(await Singleton().getInstance());
+    //print(application.makeCar("Sport"));
+    //Client().run();
+    ApplicationConfigurator().configurationExample(true, true);
   }
 
   @override
